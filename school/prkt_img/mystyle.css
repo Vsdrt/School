@@ -1,0 +1,25 @@
+body {
+	background: url(images/back.jpg)
+}
+
+p{
+	color: rgb(251, 251, 251);
+}
+
+h1{
+	color: rgb(251, 251, 251);
+}
+
+h2{
+	color: rgb(251, 251, 251);
+}
+
+.name {
+	font-weight: bold;
+	font-style: italic;
+	color: aquamarine;
+}
+
+.otsebya{
+	margin: 10px;
+}

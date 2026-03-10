@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Мультимедиа на веб-странице</title>
+	<link rel="stylesheet" href="mystyle.css">
+</head>
+
+<body>
+	<h1>Мультимедиа на веб-странице</h1>
+
+	<h2>Звуки</h2>
+
+	<p>Так гудит вертолёт (формат WAV): <embed src="audio/hcopter.wav" autostart="false" height="20" width="300"></embed></p>
+
+
+	<p>Этот звук сгенерирован с помощью бесплатного сервиса <a
+			href="http://naturesoundsfor.me/">http://naturesoundsfor.me</a>:<br />
+		формат MP3: <embed src="audio/nature.mp3" autostart="false" height="20" width="300"></embed>
+	</p>
+
+	<p>формат OGG: <audio src="адрес файла" controls="controls" height="20" width="300"></audio>
+
+
+	</p>
+
+
+
+	<h2>Видео</h2>
+	<p>Ролик с сервиса Rutube:<br /> <iframe width="720" height="405" src="https://rutube.ru/play/embed/0b6584bd462bb46c5629e12abab5ca0b/"
+		style="border: none;" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen
+		allowFullScreen></iframe>
+
+	</p>
+
+	<p>Видео в формате MP4:<br/>
+
+		<video width="320" height="240" controls="controls">
+			<source src="video/finish.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+		</video>
+	</p>
+
+	<p>Видео в формате WebM:<br />
+
+		<video width="320" height="240" controls="controls">
+			<source src="video/finish.webm" type='video/webm; codecs="vp8, vorbis"'>
+		</video>
+	</p>
+
+</body>
+
+</html>
