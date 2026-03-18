@@ -9,6 +9,7 @@ def fibb(x):
 		return 1
 	return fibb(x-1) + fibb(x-2)
 
+
 k = 0
 for x in range(20500):
 	fibb(x)
