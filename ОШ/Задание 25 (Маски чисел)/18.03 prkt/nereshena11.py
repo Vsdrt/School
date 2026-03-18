@@ -30,7 +30,7 @@ def divs(x):
 
 @lru_cache(maxsize = None)
 def solve(x):
-	q = set([x for x in range(301) if simple(x)])
+	q = list(set([x for x in range(301) if simple(x)]))
 	res = []
 
 	for i in q:
