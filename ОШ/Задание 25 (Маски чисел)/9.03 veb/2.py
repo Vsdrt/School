@@ -17,6 +17,7 @@ def prost(x):
 
 
 k = 1
+
 for x in range(1_273_548, 2000000000):
     sm = sum(divs(x))
     if prost(sm % 100_000) and k <= 5:
