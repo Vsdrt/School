@@ -46,7 +46,6 @@ for star in stars:
 for cluster in clusters:
 	print(cluster, len(clusters[cluster]))
 
-
 medoids = [
 	medoid(clusters[1]),
 	medoid(clusters[2]),
