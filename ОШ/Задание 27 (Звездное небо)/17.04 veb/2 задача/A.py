@@ -9,7 +9,6 @@ def medoid(cluster):
 
 	for a in cluster:
 		sum_a = 0
-
 		for b in cluster:
 			sum_a += dist(a, b)
 
@@ -31,8 +30,11 @@ def getCluster(first_star):
 	return cluster
 
 
+f = open("A.txt")
 
-stars = [list(map(float, star.split())) for star in open("ОШ/Задание 27 (Звездное небо)/16.04 dz/4 задача/B.txt")]
+r, k = f
+
+stars = [list(map(float, star.replace(",", ".").split())) for star in f]
 print(len(stars))
 
 clusters = []
@@ -40,22 +42,16 @@ clusters = []
 while len(stars) > 0:
 	first_star = stars.pop()
 	cluster = [first_star] + getCluster(first_star)
-	if len(cluster) < 30:
+	if len(cluster) < 10:
 		continue
-
 	print(len(cluster))
 	clusters += [cluster]
-
-n = len(clusters)
 
 medoids = []
 
 for cluster in clusters:
-	medoids += [medoid(cluster)]
+	medoids = medoids + [medoid(cluster)]
 
 print(medoids)
 
-px = sum(medoid[0] for medoid in medoids) / n
-py = sum(medoid[1] for medoid in medoids) / n
-
-print(int(px * 100_000), int(py * 100_000) )
+print(int(medoid(medoids)[0] * 10_000), int(medoid(medoids)[1] * 10_000))
